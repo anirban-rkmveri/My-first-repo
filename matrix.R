@@ -1,0 +1,23 @@
+
+result<-integrate(f,lower=-Inf,upper=Inf)
+print(result)
+f<-expression(exp(-x^2))
+df<-D(f,"x")
+print(df)
+df_value<-eval(df)
+cat("value of the derivative at x=0",df_value,"\n")
+A<-matrix(c(4,1,-1,2,7,1,1,-3,12),nrow=3,ncol=3,byrow=T)
+B<-matrix(c(3,19,31),nrow=3)
+print(A)
+print(B)
+inv<-solve(A)
+print(inv)
+c<-inv%*%B
+print(c)
+#
+A<-matrix(c(1,2,3,4),ncol=2)
+print(A)
+B<-matrix(c(4,3,2,1),nrow=2)
+print(B)
+X<-((A*B)+2)
+print(X)
